@@ -13,7 +13,7 @@ public class FooterMenuPresenter
     {
         this.view = view;
         this.config = config;
-        view.Initialize(this);
+        view.Initialize(this, config);
         view.PopulateItems(config.MenuItems);
     }
 

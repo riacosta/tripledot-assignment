@@ -13,9 +13,10 @@ public class FooterMenuView : MonoBehaviour
     private List<FooterMenuItemView> itemViews = new List<FooterMenuItemView>();
     private FooterMenuPresenter presenter;
 
-    public void Initialize(FooterMenuPresenter presenter)
+    public void Initialize(FooterMenuPresenter presenter, FooterMenuConfig config)
     {
         this.presenter = presenter;
+        this.config = config;
     }
 
     public void PopulateItems(List<FooterMenuItem> items)
