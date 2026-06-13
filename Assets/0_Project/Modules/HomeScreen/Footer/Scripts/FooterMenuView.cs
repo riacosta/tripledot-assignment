@@ -8,7 +8,7 @@ public class FooterMenuView : MonoBehaviour
 {
     [Header("Configuration")]
 
-    [SerializeField] private GameObject ItemsContainer;
+    [SerializeField] private GameObject itemsContainer;
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private Image selectionIndicator;
 
@@ -16,7 +16,7 @@ public class FooterMenuView : MonoBehaviour
     private List<FooterMenuItemView> itemViews = new List<FooterMenuItemView>();
     private FooterMenuPresenter presenter;
 
-
+    private Tween selectionIndicatorAnimation;
 
     public void Initialize(FooterMenuPresenter presenter, FooterMenuConfig config)
     {
@@ -29,7 +29,7 @@ public class FooterMenuView : MonoBehaviour
 
     public void PopulateItems(List<FooterMenuItem> items)
     {
-        foreach (Transform child in ItemsContainer.transform)
+        foreach (Transform child in itemsContainer.transform)
         {
             Destroy(child.gameObject);
         }
@@ -37,7 +37,7 @@ public class FooterMenuView : MonoBehaviour
         FooterMenuItem selectedItem = null;
         foreach (var item in items)
         {
-            var itemView = Instantiate(itemPrefab, ItemsContainer.transform).GetComponent<FooterMenuItemView>();
+            var itemView = Instantiate(itemPrefab, itemsContainer.transform).GetComponent<FooterMenuItemView>();
 
             itemView.Initialize(config);
             itemView.SetItem(item);
@@ -69,18 +69,25 @@ public class FooterMenuView : MonoBehaviour
         }
         SetSelectionIndicator(selectedItemView);
     }
-    
+
     private void SetSelectionIndicator(FooterMenuItemView selectedItemView, bool instant = false)
     {
         float animationTime = instant ? 0f : config.SelectionAnimationDuration;
         RectTransform selectionIndicatorRect = selectionIndicator.transform as RectTransform;
-       
+
+        selectionIndicatorRect.DOKill();
+        selectionIndicator.DOKill();
+        if (selectionIndicatorAnimation != null)
+        {
+            selectionIndicatorAnimation.Kill();
+        }
+
         if (selectedItemView != null)
         {
 
             //Follows the selected item with a smooth animation
             float initialX = selectionIndicatorRect.anchoredPosition.x;
-            Tween updateTween = DOVirtual.Float(0f, 1f,
+            selectionIndicatorAnimation = DOVirtual.Float(0f, 1f,
                 animationTime,
                value =>
                {
@@ -100,13 +107,13 @@ public class FooterMenuView : MonoBehaviour
                            selectionIndicator.GetComponent<RectTransform>().sizeDelta.y),
                            animationTime
                            ).SetEase(config.SelectionAnimationEase);
-            
+
             //Moves the indicator up and down with the selected item
             selectionIndicatorRect.DOAnchorPosY(
                             config.SelectionIndicatorHeight,
                             animationTime
                             ).SetEase(config.SelectionAnimationEase);
-            
+
             //Fades in the selection indicator
             selectionIndicator.DOColor(
                             Color.white,

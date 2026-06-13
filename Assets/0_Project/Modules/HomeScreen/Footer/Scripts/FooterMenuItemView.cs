@@ -50,10 +50,14 @@ public class FooterMenuItemView : MonoBehaviour, IPointerClickHandler
 
     public void SetSelected(bool isSelected,bool instant = false)
     {
+        labelText.DOKill();
+        label.transform.DOKill();
+        icon.transform.DOKill();
+
         float animationTime = instant ? 0f : config.SelectionAnimationDuration;
         float targetSize = isSelected ? config.SelectedItemSize : config.DeselectedItemSize;
         Color targetColor = isSelected ? Color.white : config.HiddenItemColor;
-        float targetTextOffsetY = isSelected ? initialTextOffsetY : initialTextOffsetY - 100;
+        float targetTextOffsetY = isSelected ? initialTextOffsetY : initialTextOffsetY - config.ItemLabelMoveY;
         float targetIconScale = isSelected ? config.SelectedItemIconScale : 1f;
         float targetIconMoveY = isSelected ? config.SelectedItemIconMoveY : 0f;
 
