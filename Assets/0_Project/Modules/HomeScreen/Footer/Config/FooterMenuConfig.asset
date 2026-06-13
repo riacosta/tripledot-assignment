@@ -14,28 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuItems:
   - LocalizationKey: left_feature
-    Icon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
-    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    Icon: {fileID: 21300000, guid: b06c93ebd5bb9d34799d80ef5db51984, type: 3}
     IsSelected: 0
     IsLocked: 1
   - LocalizationKey: Shop
     Icon: {fileID: 21300000, guid: 7304766a9c3132f469ec67f229469e48, type: 3}
-    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
     IsSelected: 0
     IsLocked: 0
   - LocalizationKey: Home
     Icon: {fileID: 21300000, guid: 1dd216aadc6d6b545a9e4314c427c921, type: 3}
-    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
     IsSelected: 0
     IsLocked: 0
   - LocalizationKey: Map
     Icon: {fileID: 21300000, guid: e84ad8e81485af041a6f4188fadd4e1e, type: 3}
-    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
     IsSelected: 0
     IsLocked: 0
   - LocalizationKey: right_feature
-    Icon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
-    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    Icon: {fileID: 21300000, guid: b06c93ebd5bb9d34799d80ef5db51984, type: 3}
     IsSelected: 0
     IsLocked: 1
   LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+  SelectedItemSize: 400
+  SelectedItemIconScale: 1.4
+  SelectedItemIconMoveY: 50
+  DeselectedItemSize: 180
+  SelectionAnimationDuration: 0.2
+  SelectionAnimationEase: 27
+  HiddenItemColor: {r: 1, g: 1, b: 1, a: 0}
+  SelectionIndicatorHeight: -180
