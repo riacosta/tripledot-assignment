@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68adcacaecf6845f89eb0bf6bc777a12, type: 3}
+  m_Name: FooterMenuConfig
+  m_EditorClassIdentifier: 
+  MenuItems:
+  - LocalizationKey: left_feature
+    Icon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    IsSelected: 0
+    IsLocked: 1
+  - LocalizationKey: Shop
+    Icon: {fileID: 21300000, guid: 7304766a9c3132f469ec67f229469e48, type: 3}
+    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    IsSelected: 0
+    IsLocked: 0
+  - LocalizationKey: Home
+    Icon: {fileID: 21300000, guid: 1dd216aadc6d6b545a9e4314c427c921, type: 3}
+    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    IsSelected: 0
+    IsLocked: 0
+  - LocalizationKey: Map
+    Icon: {fileID: 21300000, guid: e84ad8e81485af041a6f4188fadd4e1e, type: 3}
+    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    IsSelected: 0
+    IsLocked: 0
+  - LocalizationKey: right_feature
+    Icon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
+    IsSelected: 0
+    IsLocked: 1
+  LockedIcon: {fileID: 21300000, guid: 37a1184a860b552448dab42265e84a76, type: 3}
