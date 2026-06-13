@@ -87,6 +87,8 @@ GameObject:
   - component: {fileID: 4400203499053596346}
   - component: {fileID: 8603374816560822418}
   - component: {fileID: 1927799626362877575}
+  - component: {fileID: 9099777316801108752}
+  - component: {fileID: 6553101802748927698}
   m_Layer: 5
   m_Name: Star
   m_TagString: Untagged
@@ -137,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: d92eefe328859a84b864901406d80e56, type: 2}
-  m_Color: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -176,6 +178,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9099777316801108752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4600110704138701968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234ecbf01386c405c99d237b9ad827fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propertyName: _TwirlStrength
+  value: 0
+--- !u!114 &6553101802748927698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4600110704138701968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234ecbf01386c405c99d237b9ad827fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propertyName: _Scale
+  value: 1.1
 --- !u!1 &5100215243316880505
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,9 +508,9 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
-  moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  moveWithTransform: 2
+  moveWithCustomTransform: {fileID: 1351094704534639687}
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -541,7 +571,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.02
+      scalar: 21.31
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -659,8 +689,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.5
+      scalar: 50
+      minScalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -976,7 +1006,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 6
+    maxNumParticles: 20
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -1123,7 +1153,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 219.77
       mode: 0
       spread: 0
       speed:
@@ -1620,8 +1650,8 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5707963
-      minScalar: 1.5707963
+      scalar: 0.6981317
+      minScalar: -0.6981317
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5254,6 +5284,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4123930810605440263, guid: 93c2890d218ee9d4ea03e1fc5625bf94, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6153677519051194016, guid: 93c2890d218ee9d4ea03e1fc5625bf94, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4405663
@@ -5297,6 +5331,10 @@ PrefabInstance:
     - target: {fileID: 6599645328489502177, guid: 93c2890d218ee9d4ea03e1fc5625bf94, type: 3}
       propertyPath: m_Name
       value: StarBurst_Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599645328489502177, guid: 93c2890d218ee9d4ea03e1fc5625bf94, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

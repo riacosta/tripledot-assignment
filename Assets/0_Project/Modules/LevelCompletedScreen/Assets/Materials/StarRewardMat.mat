@@ -27,6 +27,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _HighLightTexture:
+        m_Texture: {fileID: 2800000, guid: 8bb518d673ef54c5783f06e3cb47bbce, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -58,16 +62,19 @@ Material:
     m_Ints: []
     m_Floats:
     - _ColorMask: 15
-    - _CycleTime: 4
+    - _CycleTime: 2
     - _EnableExternalAlpha: 0
+    - _HighlightSpeed: 0.5
     - _Intensity: 18.28
     - _Rotation: 168
+    - _RotationSpeed: 20
     - _Speed: 2
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
+    - _TwirlStrength: -0.255
     - _UIMaskSoftnessX: 1
     - _UIMaskSoftnessY: 1
     - _ZWrite: 0

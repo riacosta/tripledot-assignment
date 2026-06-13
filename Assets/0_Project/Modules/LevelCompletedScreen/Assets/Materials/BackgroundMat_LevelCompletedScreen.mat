@@ -19,7 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _Pattern_Texture
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -45,7 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Pattern_Texture:
         m_Texture: {fileID: 2800000, guid: 3465125438b831140a138e7e12cc8591, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.6, y: 0.6}
         m_Offset: {x: 0, y: 0}
     - _pattern:
         m_Texture: {fileID: 2800000, guid: 3465125438b831140a138e7e12cc8591, type: 3}
@@ -67,7 +67,7 @@ Material:
     m_Floats:
     - _ColorMask: 15
     - _EnableExternalAlpha: 0
-    - _PatternOpacity: 0.015
+    - _PatternOpacity: 0.075
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -77,10 +77,12 @@ Material:
     - _UIMaskSoftnessY: 1
     - _ZWrite: 0
     m_Colors:
-    - _BottomColor: {r: 0.09411765, g: 0.345098, b: 0.6588235, a: 1}
+    - _BottomColor: {r: 0.15574935, g: 0.50759166, b: 0.9433962, a: 1}
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _PanSpeed: {r: 0.3, g: -0.3, b: 0, a: 0}
+    - _PatternColor: {r: 0.15566039, g: 0.55630773, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _TopColor: {r: 0.1333333, g: 0.4823529, b: 0.9529412, a: 1}
+    - _TopColor: {r: 0.2971698, g: 0.59786516, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
